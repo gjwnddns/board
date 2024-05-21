@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Content</th>
+                <!-- 기타 필드들 추가 -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="board : ${boardList}">
+                <td th:text="${board.id}">1</td>
+                <td th:text="${board.title}">Title</td>
+                <td th:text="${board.content}">Content</td>
+                <!-- 기타 필드들 표시 -->
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

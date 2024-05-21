@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.board.dao.BoardMapper">
+
+    <select id="getAllBoardList" resultType="com.example.board.dto.Board">
+        SELECT * FROM boards;
+    </select>
+
+    <insert id="addBoard" parameterType="com.example.board.dto.Board">
+        insert into boards(title, content, writer, views, password) values(#{title}, #{content}, #{writer}, #{views}, #{password});
+    </insert>
+
+</mapper>

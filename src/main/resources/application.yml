@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/testDB?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=utf8
+    username: root
+    password: since2001
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+mybatis:
+  config-location: classpath:mybatis-config.xml
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.example.board
